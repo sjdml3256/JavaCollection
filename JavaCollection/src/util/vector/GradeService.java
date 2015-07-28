@@ -1,5 +1,7 @@
 package util.vector;
 
+import java.util.Vector;
+
 public interface GradeService {
 	// 인터페이스는 추상메소드만 존재한다
 	// 따라서 abstract를 생략해도 디폴트로 존재한다.
@@ -21,5 +23,15 @@ public interface GradeService {
 	/*
 	 * 성적순으로 정렬
 	 * */
-	public void ascGradeTotal();
+	public void descbyTotal();
+	
+	/*
+	 * 이름으로 성적결과 조회(검색)
+	 * */
+	public Vector<Grade> searchGradeByName(String name);
+	
+	/*
+	 * 이름으로 오름차순
+	 * */
+	public void ascbyName();
 }
